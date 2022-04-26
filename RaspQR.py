@@ -18,7 +18,7 @@ cap.set(3,640)
 cap.set(4,480)
 
 student_list =[]
-adminEmail = "k.bezuayeho22@bosco.org"
+adminEmail = ""
 time_list = []
 location_list = []
 file_list = []
