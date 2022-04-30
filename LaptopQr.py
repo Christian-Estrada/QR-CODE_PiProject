@@ -25,7 +25,7 @@ def email():
     for x in email_list:
         msg = EmailMessage()
         msg['Subject'] = 'QR code for the day'
-        msg['From'] = "projectwhereabouts2022@gmail.com"
+        msg['From'] = ""
         msg['To'] = x
         msg.set_content("Dear "+student_list[q]+', this is your QR code for the day. Please scan at QR code station located near teacher\'s desk. This QR code is only viable for the date '+str(tday))
         with open(file_list[q], "rb") as f:
@@ -34,7 +34,7 @@ def email():
             file_name = f.name
         msg.add_attachment(file_data, maintype="image", subtype=file_type, filename=f.name)
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login("projectwhereabouts2022@gmail.com", "e2W!+7@Z")
+            smtp.login("", "")
             smtp.send_message(msg)
         q=q+1
 
